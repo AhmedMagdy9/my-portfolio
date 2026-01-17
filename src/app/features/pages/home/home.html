@@ -1,0 +1,73 @@
+
+<div class="py-20 "><app-navbar></app-navbar></div>
+<!-- hero -->
+<section class="dark:bg-main-700 overflow-hidden  transition-colors duration-500 group flex flex-col lg:flex-row w-full min-h-150 sm:min-h-175 lg:h-[700] lg:-mb-2 xl:mb-0 xl:h-211.5 px-4 sm:px-6 md:px-8 gap-6 sm:gap-8 md:gap-17.75 items-center justify-center mt-6">
+  <!-- my info -->
+  <div class=" order-1 lg:order-0 flex flex-col w-82 h-34.5 items-start justify-start transition-transform duration-300 ease-in-out lg:group-hover:-translate-y-62.5">
+    <p class="text-[#344054] dark:text-gray-200 text-[36px] leading-none">"</p>
+    <p class="text-[#344054] dark:text-gray-300 text-[16px] font-medium leading-snug">{{ 'ABOUT_ME' | translate }}</p>
+  </div>
+  <!-- img & btns & frame & name  -->
+  <div class="relative w-full flex flex-col items-center justify-center ">
+    <!-- name & job title -->
+    <div class="flex w-full max-w-238 flex-col items-center justify-center  transition-all duration-300 ease-in-out group-hover:translate-y-70 group-hover:opacity-0 px-4 sm:px-6">
+     <p class="h-11.25 px-6.5 py-3.25 translate-y-0 md:translate-y-10 rounded-full border border-[#171717] dark:border-gray-300 flex items-center justify-center bg-white dark:bg-gray-800 dark:text-white mt-10 mb-2">{{ 'hello' | translate }}</p>
+      <h1 class="flex flex-col sm:flex-row sm:gap-2 items-center sm:items-end mb-1 mt-6 sm:mt-8 font-serif">
+        <span class="leading-tight text-[#171717] dark:text-gray-200 font-semibold text-4xl sm:text-5xl md:text-7xl xl:text-[88px]">{{ 'Im' | translate }}</span>
+        <div class="flex items-end">
+          <span class="leading-tight text-main font-semibold text-4xl sm:text-5xl md:text-7xl xl:text-[88px]">{{ 'Ahmed' | translate }}</span>
+          <span class="leading-tight text-[#171717] dark:text-gray-200 font-semibold text-4xl sm:text-5xl md:text-7xl xl:text-[88px]">,</span>
+        </div>
+      </h1>
+      <h2 class="leading-tight text-[#171717] dark:text-gray-200 font-semibold text-4xl sm:text-5xl md:text-7xl xl:text-[88px] text-center font-serif">{{ 'frontend' | translate }}</h2>
+    </div>
+    <!-- img & frame -->
+    <div class="relative w-full   max-w-238 aspect-3/2 flex flex-col items-center justify-center -translate-y-[10%] sm:-translate-y-[15%] md:-translate-y-[20%] mx-auto px-4">
+      <!-- frame img  -->
+      <div class="absolute bottom-0 z-0 w-[90%] max-w-203 aspect-2/1 overflow-hidden flex items-center justify-center pointer-events-auto">
+        <div class="absolute w-full h-full bg-[#FEB273] rounded-t-full"></div>
+      </div>
+      <!-- frame -->
+      <div class="absolute z-10 transition-all duration-500 ease-in-out opacity-0 scale-0 group-hover:opacity-100 group-hover:scale-105">
+        <img alt="Frame Decoration" width="1017" height="688" decoding="async" data-nimg="1" class="object-contain w-full h-auto" style="color:transparent" src="https://my-project-gamma-sable.vercel.app/Frame%2068.svg">
+      </div>
+      <!-- my img me-10 lg:me-20  -->
+      <img class="w-60 mr-10 lg:mr-20 md:w-130 lg:w-140 z-10 lg:translate-y-8.25" src="/img/ahmed-img (1).png" loading="lazy" alt="my img">
+      <!-- btns D & H -->
+      <div class="absolute bottom-[10%] z-30 w-full   flex justify-center">
+        <div class="w-[85%] md:w-1/2 py-2 flex border-b-2 border-white dark:border-gray-400  dark:bg-gray-800/30 backdrop-blur-[5px] rounded-full gap-2.5  items-center justify-center ">
+          <a href="https://drive.google.com/uc?export=download&id=1xfPYjOTNlI67OsaGVZe999_Zb2sfLMi7"  target="_blank" class=" bg-black/50 dark:bg-gray-700 hover:bg-main  flex items-center justify-center gap-2.5 px-5 py-2.5 rounded-[60px] transition-all duration-900 ease-in-out cursor-pointer  text-white font-medium text-[18px]w-52 h-13.5 ">{{ 'download' | translate }}</a>
+          <a href="https://drive.google.com/file/d/1xfPYjOTNlI67OsaGVZe999_Zb2sfLMi7/view?usp=drive_link" target="_blank" class="bg-black/50 dark:bg-gray-700 hover:bg-main  flex items-center justify-center gap-2.5 px-5 py-2.5 rounded-[60px] transition-all duration-900 ease-in-out cursor-pointer  text-white  text-[18px] w-32.25 h-13.5 font-medium">{{ 'View' | translate }}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- my experience -->
+  <div class=" order-2 lg:flex w-42.25 h-31.25 flex-col items-end justify-end gap-2 transition-transform duration-300 ease-in-out lg:group-hover:-translate-y-62.5">
+      <div class="flex ">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="#FD853A" stroke="#FD853A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="#FD853A" stroke="#FD853A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="#FD853A" stroke="#FD853A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="#FD853A" stroke="#FD853A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="#FD853A" stroke="#FD853A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+      </div>
+    <h1 class="text-[32px] font-bold text-[#171717] dark:text-gray-200 leading-none whitespace-nowrap">{{ 'years' | translate }}</h1>
+    <p class="text-sm text-[#171717] dark:text-gray-300">{{ 'experiencee' | translate }}</p>
+  </div>
+</section>
+<!-- projects -->
+<app-projects id="Project"></app-projects>
+<!-- experience -->
+<app-experience id="exexperience"></app-experience>
+<app-skills  id="skills"></app-skills>
+<!-- testimonials -->
+<app-testimonal id="testimonials"></app-testimonal>
+<!-- contact -->
+<app-footer id="contact"></app-footer>
+
+<!-- Fixed Social Icons -->
+<app-social-icon></app-social-icon>
+
+
+
+

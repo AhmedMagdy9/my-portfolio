@@ -1,3 +1,43 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import "tailwindcss";
+@import 'swiper/css';
+@import 'swiper/css/navigation';
+@import 'swiper/css/pagination';
+@variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-main: #FD853A;
+  --color-main-700: #212020;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+.active {
+  @apply bg-main font-bold;
+}
+
+swiper-container {
+  --swiper-pagination-bullet-width: 15px;
+  --swiper-pagination-bullet-height: 15px;
+  
+  --swiper-pagination-bullet-active-scale: 1.3;
+  --swiper-pagination-bullet-active-shadow: 0 0 8px rgba(255,140,0,0.5);
+}
+swiper-container {
+  --swiper-theme-color: #ff8c00;
+}
+
+swiper-container::part(pagination) {
+  bottom: -5px;                 /* خليها جوه */
+}
+
+/* إضافة أنيميشن بسيط للـ Progress bar */
+@keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+

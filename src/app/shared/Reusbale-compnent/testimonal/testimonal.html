@@ -1,0 +1,90 @@
+<section class="py-10 pb-30 dark:bg-main-700 transition-colors duration-500">
+  <div class="max-w-7xl mx-auto px-6 ">
+    <app-header [title]="'testimonial' | translate"></app-header>
+    <div >
+      <swiper-container dir="ltr"  slidesPerView="auto" navigation="false" autoplay="true" autoplay-delay="5000"
+        autoplay-disable-on-interaction="false" loop="false" [loop]="3" pagination="true" slides-per-view="3"
+        space-between="15"
+        [breakpoints]="{'0': { slidesPerView: 1, spaceBetween: 16 },'640': { slidesPerView: 2, spaceBetween: 18 },'850': { slidesPerView: 2, spaceBetween: 20 },'1024': { slidesPerView: 3, spaceBetween: 24 },'1280': { slidesPerView: 3, spaceBetween: 24 }}">
+
+        <swiper-slide class="cursor-pointer">
+          <div class="bg-black/20 dark:bg-[#2a2a2a] flex flex-col rounded-2xl p-8 shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-500 h-87.5 border border-transparent dark:border-white/5">
+            <span class="text-6xl text-gray-200 dark:text-gray-700 leading-none">“</span>
+            <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">{{ 'COURSE_FEEDBACK' | translate }} </p>
+            <div class="flex items-center gap-4 mt-auto">
+              <div>
+                <h4 class="font-semibold text-gray-900 dark:text-white">
+                  {{ 'Mohamed_Abdelmoaty' | translate }}
+                </h4>
+                <span class="text-sm text-gray-500 dark:text-gray-400">
+                 {{ 'MENTOR_ROUTE' | translate }}
+                </span>
+                <div class="flex text-yellow-400 mt-1">
+                  ★★★★★
+                </div>
+              </div>
+            </div>
+          </div>
+        </swiper-slide>
+
+        <swiper-slide class="cursor-pointer">
+          <div class="bg-black/20 dark:bg-[#2a2a2a] flex flex-col rounded-2xl p-8 shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-500 h-87.5 border border-transparent dark:border-white/5">
+            <span class="text-6xl text-gray-200 dark:text-gray-700 leading-none">“</span>
+            <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">{{ 'Instructor_FEEDBACK' | translate }}</p>
+            <div class="flex items-center gap-4 mt-auto">
+              <div>
+                <h4 class="font-semibold text-gray-900 dark:text-white">{{ 'heba_ali' | translate }}</h4>
+                <span class="text-sm text-gray-500 dark:text-gray-400">{{ 'INSTRUCTOR_ROUTE' | translate }}</span>
+                <div class="flex text-yellow-400 mt-1">★★★★★</div>
+              </div>
+            </div>
+          </div>
+        </swiper-slide>
+
+        <swiper-slide class="cursor-pointer">
+          <div class="bg-black/20 dark:bg-[#2a2a2a] flex flex-col rounded-2xl p-8 shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-500 h-87.5 border border-transparent dark:border-white/5">
+            <span class="text-6xl text-gray-200 dark:text-gray-700 leading-none">“</span>
+            <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">{{ 'Training_FEEDBACK' | translate }} </p>
+            <div class="flex items-center gap-4 mt-auto">
+              <div>
+                <h4 class="font-semibold text-gray-900 dark:text-white">{{ 'TRAINING_TEAMMATE' | translate }}</h4>
+                <span class="text-sm text-gray-500 dark:text-gray-400">Web Master</span>
+                <div class="flex text-yellow-400 mt-1">★★★★★</div>
+              </div>
+            </div>
+          </div>
+        </swiper-slide>
+
+        <swiper-slide class="cursor-pointer">
+          <div class="bg-black/20 dark:bg-[#2a2a2a] flex flex-col rounded-2xl p-8 shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-500 h-87.5 border border-transparent dark:border-white/5">
+            <span class="text-6xl text-gray-200 dark:text-gray-700 leading-none">“</span>
+            <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-6"> {{ 'INSTRUCTOR_CONFIDENCE' | translate }}</p>
+            <div class="flex items-center gap-4 mt-auto">
+              <div>
+                <h4 class="font-semibold text-gray-900 dark:text-white">{{ 'mahmoud_Hesham' | translate }}</h4>
+                <span class="text-sm text-gray-500 dark:text-gray-400">{{ 'INSTRUCTOR_ROUTE' | translate }}</span>
+                <div class="flex text-yellow-400 mt-1">★★★★★</div>
+              </div>
+            </div>
+          </div>
+        </swiper-slide>
+
+        <swiper-slide class="cursor-pointer">
+          <div class="bg-black/20 dark:bg-[#2a2a2a] flex flex-col rounded-2xl p-8 shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-500 h-87.5 border border-transparent dark:border-white/5">
+            <span class="text-6xl text-gray-200 dark:text-gray-700 leading-none">“</span>
+            <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">{{ 'FONDER_PRAISE' | translate }} </p>
+            <div class="flex items-center gap-4 mt-auto">
+              <div>
+                <h4 class="font-semibold text-gray-900 dark:text-white">{{ 'Dalia_Alaa' | translate }}</h4>
+                <span class="text-sm text-gray-500 dark:text-gray-400">{{ 'FOUNDER_ITS_SKIN' | translate }}</span>
+                <div class="flex text-yellow-400 mt-1">★★★★★</div>
+              </div>
+            </div>
+          </div>
+        </swiper-slide>
+
+      </swiper-container>
+    </div>
+  </div>
+</section>
+
