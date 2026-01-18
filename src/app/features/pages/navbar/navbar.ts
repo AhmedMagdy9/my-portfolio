@@ -1,4 +1,4 @@
-import { Component, HostListener, inject } from '@angular/core';
+import { Component, HostListener, inject, signal, WritableSignal } from '@angular/core';
 import { ThemeMode } from '../../../core/services/dark-mode/theme-mode';
 import { TranslatePipe } from '@ngx-translate/core';
 import { Mytranlate } from '../../../core/services/translate/mytranlate';
@@ -12,34 +12,34 @@ import { Subscription } from 'rxjs';
 })
 export class Navbar {
 // Default: القائمة مخفية
-isMobileMenuHidden = true;
-isSticky = false;
-isDarkMode = false;
-activeSection: string | null = null;
+isMobileMenuHidden:WritableSignal<boolean> = signal(true);
+isSticky:WritableSignal<boolean> = signal(false);
+isDarkMode:WritableSignal<boolean> = signal(false);
+activeSection:WritableSignal<string | null> = signal(null);
 private themeMode = inject(ThemeMode)
 private mytranlatet =inject(Mytranlate)
-currentLang!: string;
+currentLang = signal<string | undefined>(undefined);
 private sub!: Subscription;
 
 
   constructor() {
     this.sub = this.mytranlatet.currentLang$.subscribe(lang => {
-      this.currentLang = lang;
+      this.currentLang.set(lang);
     });
   }
 
 ngOnInit() {
-  this.isDarkMode = this.themeMode.darkMode();
+  this.isDarkMode.set(this.themeMode.darkMode());
 }
 
 toggleDarkMode() {
   this.themeMode.toggleDarkMode();
-  this.isDarkMode = !this.isDarkMode;
+  this.isDarkMode.set(!this.isDarkMode());
 }
 
 // function toggle
 toggleMobileMenu() {
-  this.isMobileMenuHidden = !this.isMobileMenuHidden;
+  this.isMobileMenuHidden.set(!this.isMobileMenuHidden());
 }
 
 scrollTo(id: string) {
@@ -49,15 +49,15 @@ scrollTo(id: string) {
       behavior: 'smooth',
       block: 'start'
     });
-    this.activeSection = id; 
+    this.activeSection.set(id); 
   }
   // اقفل الموبايل منيو لو مفتوحة
-  this.isMobileMenuHidden = true;
+  this.isMobileMenuHidden.set(true);
 }
 
 @HostListener('window:scroll', [])
 onScroll() {
-  this.isSticky = window.scrollY > 70;
+  this.isSticky.set(window.scrollY > 70);
 }
 
 changeLang(lang: string) {

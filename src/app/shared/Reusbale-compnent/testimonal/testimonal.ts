@@ -1,8 +1,7 @@
 import { Component, CUSTOM_ELEMENTS_SCHEMA, inject } from '@angular/core';
 import { Header } from '../header/header';
 import { TranslatePipe } from '@ngx-translate/core';
-import { Subscription } from 'rxjs';
-import { Mytranlate } from '../../../core/services/translate/mytranlate';
+
 
 @Component({
   selector: 'app-testimonal',
@@ -13,17 +12,5 @@ import { Mytranlate } from '../../../core/services/translate/mytranlate';
 })
 export class Testimonal {
 
-private mytranlatet =inject(Mytranlate)
-currentLang!: string;
-private sub!: Subscription;
 
-  constructor() {
-    this.sub = this.mytranlatet.currentLang$.subscribe(lang => {
-      this.currentLang = lang;
-    });
-  }
-
-    ngOnDestroy() {
-    this.sub.unsubscribe();
-  }
 }

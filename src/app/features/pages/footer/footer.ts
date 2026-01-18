@@ -1,27 +1,24 @@
-import { Component } from '@angular/core';
+import { Component, signal, WritableSignal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { TranslatePipe } from '@ngx-translate/core';
 import emailjs from 'emailjs-com';
 
 @Component({
   selector: 'app-footer',
-  imports: [ FormsModule , TranslatePipe , FontAwesomeModule  ],
+  imports: [ FormsModule , TranslatePipe   ],
   templateUrl: './footer.html',
   styleUrl: './footer.css',
 })
 export class Footer {
 
-  faArrowRight = faArrowRight
 
 
 
-  sending = false; // لعرض حالة الإرسال
+  sending:WritableSignal<boolean> = signal(false);   
 
   sendEmail(form: any) {
     if (form.invalid) return;
-    this.sending = true;
+    this.sending.set(true);
     emailjs.send(
       'service_3c543gd',   // Service ID
       'template_vk8k364',     // Template ID
@@ -35,12 +32,12 @@ export class Footer {
     .then(() => {
       alert('Message sent successfully ✅');
       form.reset();
-      this.sending = false;
+      this.sending.set(false);
     })
     .catch((err) => {
       console.error('Error:', err);
       alert('Something went wrong ❌');
-      this.sending = false;
+      this.sending.set(false);
     });
   }
 

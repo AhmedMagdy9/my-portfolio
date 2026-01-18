@@ -1,10 +1,10 @@
 <section class="bg-[url('/img/download.jfif')] bg-cover bg-center w-full rounded-4xl py-10 my-1">
-<div class="max-w-7xl mx-auto px-6">
+<div class=" px-2 lg:w-3/4 mx-auto">
 <app-header [title]="'projects' | translate"></app-header>
  <swiper-container dir="ltr" slidesPerView="auto" navigation="false" autoplay="true" autoplay-delay="5000"
         autoplay-disable-on-interaction="false" loop="false" [loop]="allProjects().length" pagination="true" slides-per-view="3"
         space-between="15"
-        [breakpoints]="{'0': { slidesPerView: 1, spaceBetween: 16 },'640': { slidesPerView: 2, spaceBetween: 18 },'850': { slidesPerView: 2, spaceBetween: 20 },'1024': { slidesPerView: 3, spaceBetween: 24 },'1280': { slidesPerView: 3, spaceBetween: 24 }}">
+        [breakpoints]="{'0': { slidesPerView: 1, spaceBetween: 15 },'640': { slidesPerView: 2, spaceBetween: 18 },'850': { slidesPerView: 2, spaceBetween: 20 },'1024': { slidesPerView: 3, spaceBetween: 24 },'1280': { slidesPerView: 3, spaceBetween: 24 }}">
  @for (project of allProjects(); track $index) {
     <swiper-slide class="cursor-pointer" >
     <app-proj-card [OneProject]="project" ></app-proj-card>

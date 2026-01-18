@@ -74,7 +74,7 @@ export class Shared {
       features: [ 'javaScript', 'bootstrap', 'Database'   ] 
     }]);
 
-  allskills = signal<Skill[]>( [
+  allskills:WritableSignal<Skill[]> = signal<Skill[]>( [
    { 
     name: 'HTML5',
     abbr: 'HT',
