@@ -11,9 +11,10 @@
   --color-main-700: #212020;
 }
 
-
 html {
   scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: #FD853A  #f3f4f6;
 }
 .active {
   @apply bg-main font-bold;
